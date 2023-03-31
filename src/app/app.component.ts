@@ -9,7 +9,7 @@ export class AppComponent {
   loadedFeature = 'recipe';
 
   onNavigate(navData: string) {
-    console.log(navData);
+    // console.log(navData);
     this.loadedFeature = navData;
   }
 }
