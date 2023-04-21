@@ -3,9 +3,9 @@ import {
   Input,
   EventEmitter,
   OnChanges,
-  Output,
 } from '@angular/core';
 import { Recipe } from './../../recipe.model';
+import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -15,10 +15,12 @@ import { Recipe } from './../../recipe.model';
 export class RecipeItemComponent implements OnChanges {
   @Input() recipe: Recipe;
 
-  @Output() viewRecipeItem = new EventEmitter<void>();
+  constructor(private recipeService: RecipeService){
+
+  }
 
   onViewDetails() {
-    this.viewRecipeItem.emit();
+    this.recipeService.recipeSelected.emit(this.recipe)
   }
 
   ngOnChanges() {
