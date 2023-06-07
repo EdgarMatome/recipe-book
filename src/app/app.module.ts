@@ -19,8 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeService } from './recipes/recipe.service';
 
 @NgModule({
-  declarations: [AppComponent
-    , ShoppingListComponent,
+  declarations: [
+    AppComponent,
+    ShoppingListComponent,
     HeaderComponent,
     RecipesComponent,
     RecipeListComponent,
